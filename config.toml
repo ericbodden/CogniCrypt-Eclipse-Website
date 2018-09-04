@@ -1,0 +1,32 @@
+baseURL = "https://projects.eclipse.org/projects/technology.cognicrypt"
+languageCode = "en-us"
+title = "Securely using Cryptography with CogniCrypt"
+theme = "hugo-solstice-theme"
+
+
+[permalinks]
+  news = "/:sections/:slug/"
+  
+[[menu.main]]
+  name = "Downloads"
+  weight = -150
+  identifier = "downloads"
+  url= "/downloads/"
+
+[[menu.main]]
+  name = "Documentation"
+  weight = -100
+  identifier = "documentation"
+  url= "/documentation/"  
+  
+[[menu.main]]
+  name = "Contributing"
+  weight = -70
+  identifier = "contributing"
+  url= "/contributing/"  
+  
+[[menu.main]]
+  name = "News"
+  weight = -50
+  identifier = "news"
+  url= "/news/"
