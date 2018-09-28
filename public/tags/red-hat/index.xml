@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Red Hat on Eclipse</title>
+    <link>https://iot.eclipse.org/tags/red-hat/</link>
+    <description>Recent content in Red Hat on Eclipse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>webdev@eclipse-foundation.org (Eclipse Foundation)</managingEditor>
+    <webMaster>webdev@eclipse-foundation.org (Eclipse Foundation)</webMaster>
+    <lastBuildDate>Wed, 11 Oct 2017 15:34:37 +0000</lastBuildDate>
+    
+	<atom:link href="https://iot.eclipse.org/tags/red-hat/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Eclipse Hono – Eclipse Hono : Connect. Command. Control.</title>
+      <link>https://iot.eclipse.org/resources/2017-10-11-virtual-iot-recording/</link>
+      <pubDate>Wed, 11 Oct 2017 15:34:37 +0000</pubDate>
+      <author>webdev@eclipse-foundation.org (Eclipse Foundation)</author>
+      <guid>https://iot.eclipse.org/resources/2017-10-11-virtual-iot-recording/</guid>
+      <description>The open source response to closed and proprietary IoT solutions is called Eclipse Hono!</description>
+    </item>
+    
+  </channel>
+</rss>

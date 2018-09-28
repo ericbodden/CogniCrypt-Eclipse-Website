@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eclipse IoT Day Singapore | Sept. 18, 2018 on Eclipse</title>
+    <link>https://iot.eclipse.org/eclipse-iot-day-singapore-2018/</link>
+    <description>Recent content in Eclipse IoT Day Singapore | Sept. 18, 2018 on Eclipse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>webdev@eclipse-foundation.org (Eclipse Foundation)</managingEditor>
+    <webMaster>webdev@eclipse-foundation.org (Eclipse Foundation)</webMaster>
+    
+	<atom:link href="https://iot.eclipse.org/eclipse-iot-day-singapore-2018/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

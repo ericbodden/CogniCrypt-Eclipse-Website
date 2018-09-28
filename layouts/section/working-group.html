@@ -1,0 +1,123 @@
+{{ define "main" }}
+  <main class="main">
+    <div class="well">
+      <div class="container">
+        <h1>
+          About Us
+        </h1>
+        <div>
+          <p class="lead">The Eclipse IoT Working Group is a collaboration between organizations and individuals who share the goal of creating an open IoT. The collaboration focuses on the development, promotion and adoption of open source IoT technology. Our members provide a wide range of projects and services built on top of Eclipse IoT technology.</p>
+        </div>
+      </div>
+    </div>
+    <section class="first">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="green">Membership Benefits</h1>
+            <ul>
+              <li>
+                <p>Members can participate in the working group meetings, including technical and requirements discussions.</p>
+              </li>
+              <li>
+                <p>Members can participate in developer outreach programs, including webinars, surveys and events.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h1 class="green">More Information</h1>
+            <p>More information about the IoT WG is available on our <a href="https://wiki.eclipse.org/IoT" target="_blank">wiki page</a> and feel free to join our <a href="https://dev.eclipse.org/mailman/listinfo/iot-wg" target="_blank">mailing list</a>. <br>
+             You can also <a href='mailto&#58;%69ot&#64;&#101;%&#54;3lipse&#46;%6F&#37;72&#103;'>email us</a> if you have questions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="second">
+      <div class="container" id="members">
+        <p>Explore our current members and discover the IoT solutions they offer today
+        </p>
+        <h2 class="green">Steering Committee Members<br/><br/></h2>
+        <div id="sc-members">
+          {{ range where .Site.RegularPages.ByTitle "Section" "member" }} 
+          {{ if .Params.is_steering }}
+          <div class="row members-info" id="member-{{ .Params.logo }}">
+            <div class="col-md-2 col-md-offset-1 mb-logo">
+              <a href="http://eclipse.org/membership/showMember.php?member_id={{ .Params.member_id }}">
+                <img src="/assets/images/members/logo-{{ .Params.logo }}.png" alt="{{ .Title }}" class="img-responsive" />
+              </a>
+            </div>
+            <div class="col-md-8 col-md-offset-1 mb-info">
+              <div class="mb-info-container">
+                <h2 id="{{ .Params.logo }}">{{ .Title }} </h2> {{ .Content }}
+              </div>
+              <div>
+                {{ if isset .Params "more_url" }}
+                <a href="{{ .Params.more_url }} " target="_blank">
+                  <button class="btn btn-info">Read more <i class="icon-chevron-right"></i></button>
+                </a>
+                {{ end }} 
+                {{ if isset .Params "demo_url" }}
+                <a href="{{ .Params.demo_url }} " target="_blank">
+                  <button class="btn btn-info">View Demo <i class="icon-eye-open"></i></button>
+                </a>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+          {{ end }} 
+          {{ end }}
+        </div>
+        <h2 class="purple" style="margin-top: 2em;">Participating members<br/><br/></h2>
+        <div id="other-members">
+          {{ range where .Site.RegularPages.ByTitle "Section" "member" }} 
+          {{ if not .Params.is_steering }}
+          <div class="row members-info" id="member-{{ .Params.logo }}" title="{{ .Title }}">
+            <div class="col-md-2 col-md-offset-1 mb-logo">
+              <a href="http://eclipse.org/membership/showMember.php?member_id={{ .Params.member_id }}">
+                <img src="/assets/images/members/logo-{{ .Params.logo }}.png" alt="{{ .Title }}" class="img-responsive" />
+              </a>
+            </div>
+            <div class="col-md-8 col-md-offset-1 mb-info">
+              <div class="mb-info-container">
+                <h2 id="{{ .Params.logo }}">{{ .Title }} </h2> {{ .Content }}
+              </div>
+              <div>
+                {{ if isset .Params "more_url" }}
+                <a href="{{ .Params.more_url }} " target="_blank">
+                  <button class="btn btn-info">Read more <i class="icon-chevron-right"></i></button>
+                </a>
+                {{ end }} 
+                {{ if isset .Params "demo_url" }}
+                <a href="{{ .Params.demo_url }} " target="_blank">
+                  <button class="btn btn-info">View Demo <i class="icon-eye-open"></i></button>
+                </a>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+          {{ end }} 
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  </main>
+{{ end }}
+
+
+{{ define "footer-suffix" }}
+  <script type="text/javascript">
+  $(document).ready(function() {
+    // Order members alphabetically (case-insensitive - Hugo only does case-sensitive)
+    var $wrapper = $('#other-members');
+
+    $wrapper.find('.members-info').sort(function(a, b) {
+        //           console.log(a.getAttribute('title').toLowerCase());
+        var s1 = a.getAttribute('title').toLowerCase();
+        var s2 = b.getAttribute('title').toLowerCase();
+
+        return s1.localeCompare(s2);
+      })
+      .appendTo($wrapper);
+  });
+  </script>
+{{ end }}

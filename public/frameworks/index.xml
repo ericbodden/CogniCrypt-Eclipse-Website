@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services &amp; Frameworks on Eclipse</title>
+    <link>https://iot.eclipse.org/frameworks/</link>
+    <description>Recent content in Services &amp; Frameworks on Eclipse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>webdev@eclipse-foundation.org (Eclipse Foundation)</managingEditor>
+    <webMaster>webdev@eclipse-foundation.org (Eclipse Foundation)</webMaster>
+    <lastBuildDate>Fri, 04 Nov 2016 14:48:48 +0100</lastBuildDate>
+    
+	<atom:link href="https://iot.eclipse.org/frameworks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

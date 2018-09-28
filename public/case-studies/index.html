@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Code Generation | CogniCrypt</title>
+<meta property="og:title" content="Code Generation | CogniCrypt" />
+<meta name="twitter:title" content="Code Generation | CogniCrypt" />
+<meta name="description" content="Find out how companies have been using Eclipse IoT technolgy to deploy industrial solutions.">
+<meta property="og:description" content="Find out how companies have been using Eclipse IoT technolgy to deploy industrial solutions.">
+<meta name="twitter:description" content="Find out how companies have been using Eclipse IoT technolgy to deploy industrial solutions.">
+<meta name="author" content="Eclipse Foundation"/>
+<link href='https://iot.eclipse.org/favicon.ico' rel='icon' type='image/x-icon'/>
+<meta property="og:image" content="https://iot.eclipse.org/site_preview.jpg" />
+<meta name="twitter:image" content="https://iot.eclipse.org/site_preview.jpg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@EclipseIoT" />
+<meta name="twitter:creator" content="@EclipseIoT" />
+<meta property="og:url" content="https://iot.eclipse.org/case-studies/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Eclipse" />
+<meta name="keywords" content="">
+
+
+<meta name="generator" content="Hugo 0.47.1" />
+<link rel="canonical" href="https://iot.eclipse.org/case-studies/" />
+<link rel="alternate" href="https://iot.eclipse.org/case-studies/index.xml" type="application/rss+xml" title="Eclipse">
+
+<link rel="stylesheet" href="https://iot.eclipse.org/assets/css/bootstrap.css">
+  
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+  
+  
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+<link href="//fonts.googleapis.com/css?family=Libre+Franklin:400,700,300,600,100" rel="stylesheet" type="text/css">
+  
+</head>
+<body>
+  
+<a class="sr-only" href="#content">Skip to main content</a>
+<header class="header-wrapper" id="header-wrapper">
+  
+<nav class="navbar navbar-default">
+  <div class="container">
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+      <img alt="Eclipse IoT" src="/assets/images/iot-logo.png">
+      </a>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/_download">Download</a>
+        </li>
+        <li>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">FAQ</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/white-papers">Static Analysis</a></li>
+            <li><a href="/case-studies">Code Generation</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="/news">How to Contribute</a>
+            </li>
+            <li>
+              <a href="/devices">Code of Conduct</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/working-group">About</a>
+        </li>
+        
+        <li style="min-width: 100px; padding-top: 12px; padding-left: 15px; margin-left:-35px">
+          <a href="https://twitter.com/eclipseiot?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"></a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+  
+</nav>
+  
+
+</header>
+
+  
+  
+<style>
+  blockquote {
+  background: #f9f9f9;
+  border-left: 5px solid #ccc;
+  margin: 0.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C" "\201D";
+  }
+  blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+  }
+  blockquote p {
+  display: inline;
+  }
+</style>
+
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script');
+    po.type = 'text/javascript';
+    po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<main class="main">
+  <div class="well">
+    <div class="container">
+      <h1>Case Studies</h1>
+      <div class="lead">
+        <p>What people from various industries around the world are building with Eclipse IoT Technology</p>
+      </div>
+    </div>
+  </div>
+  <section class="first">
+    <div class="container">
+      <div class="row">
+         
+        <div class="col-md-6" style="min-height: 350px;">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>Kynetics </h3>
+            </div>
+            <div class="col-md-4" style="padding-bottom: 20px">
+              <a href="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20Kynetics.pdf">
+              <img src="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20Kynetics.png" class="img-responsive"/>
+              </a>
+            </div>
+            <div class="col-md-8">
+              <blockquote>
+                Kynetics is using Eclipse hawkBit to provide a platform for remote software updates of embedded systems.
+              </blockquote>
+              &nbsp; &nbsp;
+              <a href="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20Kynetics.pdf">
+              <img src="/assets/images/icon_pdf.png"> PDF 
+              </a>
+              &nbsp; 
+              <a href="/case-studies/supporting-software-updates-with-open-source-iot/">
+              <img src="/assets/images/icon_html.png"> HTML
+              </a>
+            </div>
+          </div>
+        </div>
+         
+        <div class="col-md-6" style="min-height: 350px;">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>Deutsche Bahn </h3>
+            </div>
+            <div class="col-md-4" style="padding-bottom: 20px">
+              <a href="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20DB.pdf">
+              <img src="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20DB.png" class="img-responsive"/>
+              </a>
+            </div>
+            <div class="col-md-8">
+              <blockquote>
+                Deutsche Bahn has adopted Eclipse Paho’s open source MQTT libraries and Eclipse Mosquitto to make their railway system more efficient and to create more value for their passengers.
+              </blockquote>
+              &nbsp; &nbsp;
+              <a href="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20DB.pdf">
+              <img src="/assets/images/icon_pdf.png"> PDF 
+              </a>
+              &nbsp; 
+              <a href="/case-studies/iot-on-railway-systems-db/">
+              <img src="/assets/images/icon_html.png"> HTML
+              </a>
+            </div>
+          </div>
+        </div>
+         
+        <div class="col-md-6" style="min-height: 350px;">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>NOJA POWER </h3>
+            </div>
+            <div class="col-md-4" style="padding-bottom: 20px">
+              <a href="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20Noja.pdf">
+              <img src="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20Noja.png" class="img-responsive"/>
+              </a>
+            </div>
+            <div class="col-md-8">
+              <blockquote>
+                NOJA has adopted the Open Source Eclipse 4DIAC Framework for Industrial Automation and Control by embedding the 4DIAC FORTE Runtime Environment into its controllers, and integrating the 4DIAC IDE into its design toolset.
+              </blockquote>
+              &nbsp; &nbsp;
+              <a href="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20Noja.pdf">
+              <img src="/assets/images/icon_pdf.png"> PDF 
+              </a>
+              &nbsp; 
+              <a href="/case-studies/smart-grid-automation-software/">
+              <img src="/assets/images/icon_html.png"> HTML
+              </a>
+            </div>
+          </div>
+        </div>
+         
+        <div class="col-md-6" style="min-height: 350px;">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>Solair </h3>
+            </div>
+            <div class="col-md-4" style="padding-bottom: 20px">
+              <a href="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20Solair.pdf">
+              <img src="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20Solair.png" class="img-responsive"/>
+              </a>
+            </div>
+            <div class="col-md-8">
+              <blockquote>
+                We chose Eclipse Kura because it is open source and allows us and our technical partners to integrate the protocol and logic with a high level language – Java
+              </blockquote>
+              &nbsp; &nbsp;
+              <a href="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20Solair.pdf">
+              <img src="/assets/images/icon_pdf.png"> PDF 
+              </a>
+              &nbsp; 
+              <a href="/case-studies/connected-products-with-eclipse-kura/">
+              <img src="/assets/images/icon_html.png"> HTML
+              </a>
+            </div>
+          </div>
+        </div>
+         
+        <div class="col-md-6" style="min-height: 350px;">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>OmSense </h3>
+            </div>
+            <div class="col-md-4" style="padding-bottom: 20px">
+              <a href="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20OmSense.pdf">
+              <img src="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20OmSense.png" class="img-responsive"/>
+              </a>
+            </div>
+            <div class="col-md-8">
+              <blockquote>
+                The market has a lot of raw data coming from smart PDUs, but they need a software layer on top of that data to make it useful
+              </blockquote>
+              &nbsp; &nbsp;
+              <a href="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20OmSense.pdf">
+              <img src="/assets/images/icon_pdf.png"> PDF 
+              </a>
+              &nbsp; 
+              <a href="/case-studies/building-virtual-power-plants/">
+              <img src="/assets/images/icon_html.png"> HTML
+              </a>
+            </div>
+          </div>
+        </div>
+         
+        <div class="col-md-6" style="min-height: 350px;">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>E.ON </h3>
+            </div>
+            <div class="col-md-4" style="padding-bottom: 20px">
+              <a href="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20E.ON.pdf">
+              <img src="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20E.ON.png" class="img-responsive"/>
+              </a>
+            </div>
+            <div class="col-md-8">
+              <blockquote>
+                We wanted a SCADA system we could use with access to some of the developers, which gives us the  flexibility to adjust the system to our needs and grow over time.
+              </blockquote>
+              &nbsp; &nbsp;
+              <a href="/resources/case-studies/Eclipse%20IoT%20Success%20Story%20-%20E.ON.pdf">
+              <img src="/assets/images/icon_pdf.png"> PDF 
+              </a>
+              &nbsp; 
+              <a href="/case-studies/monitoring-industrial-power-distribution/">
+              <img src="/assets/images/icon_html.png"> HTML
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <section class="second">
+    <div class="container">
+      <h1>Your success story here!</h1>
+      <p>Contact us at iot@eclipse.org to get your Eclipse IoT case study featured on our website.</p>
+    </div>
+  </section>
+  <section class="third">
+    <div class="container">
+    </div>
+  </section>
+</main>
+
+  
+  
+<footer id="solstice-footer">
+  <div class="container">
+    <div class="row">
+      <section class="col-sm-3 hidden-print" id="footer-eclipse-foundation">
+        <h2 class="section-title" style="color:#fff;">Eclipse Foundation</h2>
+        <ul class="nav">
+          <li><a href="https://www.eclipse.org/org/">About Us</a></li>
+          <li><a href="https://www.eclipse.org/org/foundation/contact.php">Contact
+              Us</a></li>
+          <li><a href="https://www.eclipse.org/donate">Donate</a></li>
+          <li><a href="https://www.eclipse.org/org/documents/">Governance</a></li>
+          <li><a href="https://www.eclipse.org/artwork/">Logo and
+              Artwork</a></li>
+          <li><a
+            href="https://www.eclipse.org/org/foundation/directors.php"
+          >Board of Directors</a></li>
+        </ul>
+      </section>
+      <section class="col-sm-3 hidden-print" id="footer-legal">
+        <h2 class="section-title" style="color:#fff;">Legal</h2>
+        <ul class="nav">
+          <li><a href="https://www.eclipse.org/legal/privacy.php">Privacy
+              Policy</a></li>
+          <li><a href="https://www.eclipse.org/legal/termsofuse.php">Terms
+              of Use</a></li>
+          <li><a href="https://www.eclipse.org/legal/copyright.php">Copyright
+              Agent</a></li>
+          <li><a href="https://www.eclipse.org/legal/epl-2.0/">Eclipse
+              Public License</a></li>
+          <li><a href="https://www.eclipse.org/legal/">Legal Resources
+          </a></li>
+        </ul>
+      </section>
+      <section class="col-sm-3 hidden-print" id="footer-useful-links">
+        <h2 class="section-title" style="color:#fff;">Useful Links</h2>
+        <ul class="nav">
+          <li><a href="https://bugs.eclipse.org/bugs/">Report a Bug</a></li>
+          <li><a href="//help.eclipse.org/">Documentation</a></li>
+          <li><a href="https://www.eclipse.org/contribute/">How to
+              Contribute</a></li>
+          <li><a href="https://www.eclipse.org/mail/">Mailing Lists</a></li>
+          <li><a href="https://www.eclipse.org/forums/">Forums</a></li>
+          <li><a href="//marketplace.eclipse.org">Marketplace</a></li>
+        </ul>
+      </section>
+      <section class="col-sm-3 hidden-print" id="footer-other">
+        <h2 class="section-title" style="color:#fff;">Other</h2>
+        <ul class="nav">
+          <li><a href="https://www.eclipse.org/ide/">IDE and Tools</a></li>
+          <li><a href="https://www.eclipse.org/projects">Community of
+              Projects</a></li>
+          <li><a href="https://www.eclipse.org/org/workinggroups/">Working
+              Groups</a></li>
+          <li><a href="https://www.eclipse.org/org/research/">Research@Eclipse</a></li>
+          <li><a href="https://status.eclipse.org">Service Status</a></li>
+        </ul>
+      </section>
+      <div class="col-sm-12 margin-top-20">
+        <div class="row">
+          <div id="copyright" class="col-md-8">
+            <p id="copyright-text" style="color:#fff;">Copyright © Eclipse Foundation, Inc. All
+              Rights Reserved.</p>
+          </div>
+          <div class="col-md-4 social-media">
+            <ul class="list-inline text-right">
+              <li><a class="social-media-link fa-stack fa-lg"
+                href="https://twitter.com/EclipseIoT"
+              > <i class="fa fa-circle-thin fa-stack-2x"></i> <i
+                  class="fa fa-twitter fa-stack-1x"
+                ></i>
+              </a></li>
+              <li><a class="social-media-link fa-stack fa-lg"
+                href="https://www.facebook.com/eclipseiot"
+              > <i class="fa fa-circle-thin fa-stack-2x"></i> <i
+                  class="fa fa-facebook fa-stack-1x"
+                ></i>
+              </a></li>
+              <li><a class="social-media-link fa-stack fa-lg"
+                href="https://www.youtube.com/playlist?list=PLy7t4z5SYNaRorMpk1txiehpkyeI0JLn"
+              > <i class="fa fa-circle-thin fa-stack-2x"></i> <i
+                  class="fa fa-youtube fa-stack-1x"
+                ></i>
+              </a></li>
+              <li><a class="social-media-link fa-stack fa-lg"
+                href="https://www.linkedin.com/company/eclipse-foundation"
+              > <i class="fa fa-circle-thin fa-stack-2x"></i> <i
+                  class="fa fa-linkedin fa-stack-1x"
+                ></i>
+              </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://iot.eclipse.org/assets/js/main.js"></script>
+
+
+  
+</body>
+</html>
+
