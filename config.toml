@@ -39,7 +39,7 @@ description = "iot.eclipse.org is where you can learn about the technologies dev
 # call_for_action_icon = ""
 
 [permalinks]
-  open-iot-challenge-entries = "/open-iot-challenge/entries/:title/"
+#  open-iot-challenge-entries = "/open-iot-challenge/entries/:title/"
 
 [Author]
   name = "Eclipse Foundation"
