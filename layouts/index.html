@@ -18,6 +18,22 @@
 
 {{ define "main" }}
 <main class="main">
+  <section class="first">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+        <h3><span class="green">{{ .Title }}</span></h3>        	
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="second">
+    <div class="container">
+        <div class="col-md-10">
+    		{{ .Content }}
+      </div>
+    </div>
+  </section>
   <section class="third">
     <div class="container">
       <div class="row">
@@ -53,7 +69,7 @@
               </div>
               -->
           </div>
-        </div>       
+        </div>    
       </div>
     </div>
   </section>

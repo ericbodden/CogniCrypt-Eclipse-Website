@@ -16,32 +16,23 @@
 {{ end }}
 
 {{ define "main" }}
-<main>
-  <div class="{{ if (and (isset .Page.Params "container") (ne .Page.Params ""))}}{{ .Page.Params.container }}{{else}}container{{end}}">
-    <div class="row">
-      <div class="col-md-18 padding-bottom-30">
-        <h1>{{.Title}}</h1>
-        <div class="news-list">
-          <div class="news-list-col">
-            {{ range first 10 .Data.Pages }}
-            <ul class="news-list-media list-unstyled">
-              <li>
-                <a href="{{- with .Params.link | default .RelPermalink }} {{.}} {{- end }}" class="media media-link">
-                  <p class="media-date">{{ .Date.Format "Monday, Jan 2, 2006" }}</p>
-                  <h4 class="media-heading">{{ .Title }}</h4>
-                  <p class="media-text">{{ .Summary }}</p>
-                </a>
-              </li>
-            </ul>
-            {{ end }}
-          </div>
+<main class="main">
+  <section class="first">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+        <h3><span class="green">{{ .Title }}</span></h3>        	
         </div>
       </div>
-      <div class="col-md-6  padding-bottom-30">
-        {{ partial "sidebar.html" . }}
+    </div>
+  </section>
+  <section class="second">
+    <div class="container">
+        <div class="col-md-10">
+    		{{ .Content }}
       </div>
     </div>
-  </div>
+  </section>
 </main>
 {{ end }}
 
