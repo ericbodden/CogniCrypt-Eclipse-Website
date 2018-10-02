@@ -27,33 +27,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="/projects">Download</a>
-        </li>
-        <li>
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">FAQ</a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="/white-papers">Static Analysis</a></li>
-            <li><a href="/case-studies">Code Generation</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community</a>
-          <ul class="dropdown-menu" role="menu">
-            <li>
-              <a href="/news">How to Contribute</a>
-            </li>
-            <li>
-              <a href="/devices">Code of Conduct</a>
-            </li>
-          </ul>
-        </li>
-        <li><a href="/working-group">About</a>
-        </li>
-        <!--         <li style="min-width: 100px; padding-top: 15px; padding-left: 8px;">
-          <div class="g-plusone" data-size="medium" data-href="http://iot.eclipse.org"></div>
-          </li> -->
-        <li style="min-width: 100px; padding-top: 12px; padding-left: 15px; margin-left:-35px">
+    	  {{ partial "nav.html" . }}
+        <li style="min-width: 100px; padding-top: 12px; padding-left: 50px; margin-left:-35px">
             <a href="https://twitter.com/cognicrypt?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </li>
       </ul>
