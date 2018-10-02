@@ -19,17 +19,17 @@ buildFuture = true
 
 [Params]
   
-#google_tag_manager = "GTM-5WLCZXC"
+google_tag_manager = "GTM-5WLCZXC"
   
-description = "CogniCrypt - Secure Integration of Cryptography"
+description = "iot.eclipse.org is where you can learn about the technologies developed at Eclipse to make Internet of Things (IoT) development simpler. These technologies aim at establishing an open, end-to-end, IoT stack."
   subtitle = ""
   seo_title_suffix = " | CogniCrypt"
-#  keywords = [""]
+  keywords = [""]
 #  logo = "assets/images/iot-logo.png"
-# styles = "assets/css/bootstrap.css"
-#  js = "assets/js/main.js"
+  styles = "assets/css/bootstrap.css"
+  js = "assets/js/main.js"
 
-#  favicon = "favicon.ico"
+  favicon = "favicon.ico"
 #  share_img = "site_preview.jpg"
 #  gcse = "011805775785170369411:p3ec0igo0qq"
 # header_wrapper_class = "header-default-bg-img"
