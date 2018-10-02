@@ -3,7 +3,7 @@
 (function($, window, document) {
         $(function() {
 
-                $("#link-more-members").html( "and " + ($('.logos .row').children().length - 1 - 8) + " others…") ;
+                $("#link-more-members");
 
                 $('.logos .row .regular-member').shuffle2();
 //				$('.logos .row').children('.regular-member').shuffle2();
